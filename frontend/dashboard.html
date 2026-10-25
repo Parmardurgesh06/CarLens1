@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | CarLens</title>
+
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <a href="dashboard.html" class="logo">
+
+            <img src="./images/logo.png" alt="CarLens Logo">
+
+        </a>
+
+
+        <nav>
+
+            <a href="dashboard.html" class="active">
+                Dashboard
+            </a>
+
+            <a href="predict.html">
+                Predict
+            </a>
+
+            <a href="#">
+                Compare
+            </a>
+
+            <a href="#">
+                History
+            </a>
+
+            <a href="#">
+                Profile
+            </a>
+
+        </nav>
+
+
+        <div class="nav-buttons">
+
+            <a href="index.html" class="login-btn">
+                Logout
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= DASHBOARD ================= -->
+
+    <main class="dashboard">
+
+
+        <!-- WELCOME -->
+
+        <section class="dashboard-welcome">
+
+            <div>
+
+                <p class="small-heading">
+                    YOUR DASHBOARD
+                </p>
+
+                <h1>
+                    Welcome back,
+                    <span>User</span> 👋
+                </h1>
+
+                <p>
+                    Your personal space for smarter car decisions.
+                </p>
+
+            </div>
+
+
+            <a href="predict.html" class="primary-btn">
+                + Predict a Car
+            </a>
+
+        </section>
+
+
+
+        <!-- STATISTICS -->
+
+        <section class="dashboard-stats">
+
+
+            <article class="stat-card">
+
+                <p>
+                    TOTAL PREDICTIONS
+                </p>
+
+                <h2>
+                    12
+                </h2>
+
+                <span>
+                    ↑ 3 this month
+                </span>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <p>
+                    SAVED CARS
+                </p>
+
+                <h2>
+                    04
+                </h2>
+
+                <span>
+                    Your favourite cars
+                </span>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <p>
+                    COMPARISONS
+                </p>
+
+                <h2>
+                    07
+                </h2>
+
+                <span>
+                    Cars compared
+                </span>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <p>
+                    LAST PREDICTION
+                </p>
+
+                <h2>
+                    ₹7.45L
+                </h2>
+
+                <span>
+                    Honda City
+                </span>
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- MAIN GRID -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- RECENT PREDICTIONS -->
+
+            <article class="dashboard-card">
+
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <p>
+                            RECENT ACTIVITY
+                        </p>
+
+                        <h2>
+                            Recent Predictions
+                        </h2>
+
+                    </div>
+
+
+                    <a href="#">
+                        View All →
+                    </a>
+
+                </div>
+
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>CAR</th>
+
+                            <th>YEAR</th>
+
+                            <th>PRICE</th>
+
+                            <th>STATUS</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                Honda City
+                            </td>
+
+                            <td>
+                                2021
+                            </td>
+
+                            <td>
+                                ₹7.45 L
+                            </td>
+
+                            <td>
+                                Completed
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Hyundai Creta
+                            </td>
+
+                            <td>
+                                2022
+                            </td>
+
+                            <td>
+                                ₹12.20 L
+                            </td>
+
+                            <td>
+                                Completed
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Tata Nexon
+                            </td>
+
+                            <td>
+                                2020
+                            </td>
+
+                            <td>
+                                ₹7.10 L
+                            </td>
+
+                            <td>
+                                Completed
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </article>
+
+
+
+            <!-- QUICK ACTIONS -->
+
+            <article class="dashboard-card">
+
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <p>
+                            QUICK ACTIONS
+                        </p>
+
+                        <h2>
+                            What would you like to do?
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+
+                    <a href="predict.html">
+
+                        <span>
+                            🚗
+                        </span>
+
+                        <strong>
+                            Predict Price
+                        </strong>
+
+                        <small>
+                            Find your car's value
+                        </small>
+
+                    </a>
+
+
+                    <a href="#">
+
+                        <span>
+                            ⇄
+                        </span>
+
+                        <strong>
+                            Compare Cars
+                        </strong>
+
+                        <small>
+                            Compare two vehicles
+                        </small>
+
+                    </a>
+
+
+                    <a href="#">
+
+                        <span>
+                            ◷
+                        </span>
+
+                        <strong>
+                            Prediction History
+                        </strong>
+
+                        <small>
+                            View previous predictions
+                        </small>
+
+                    </a>
+
+
+                    <a href="#">
+
+                        <span>
+                            ★
+                        </span>
+
+                        <strong>
+                            Saved Cars
+                        </strong>
+
+                        <small>
+                            View favourite cars
+                        </small>
+
+                    </a>
+
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- INSIGHT -->
+
+        <section class="dashboard-insight">
+
+            <p class="small-heading">
+                CARLENS INSIGHT
+            </p>
+
+            <h2>
+                Your next car decision starts with
+                <span>better information.</span>
+            </h2>
+
+            <p>
+                Use CarLens prediction and comparison tools
+                to make more informed decisions when buying
+                or selling a used car.
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="./js/auth.js"></script>
+
+</body>
+
+</html>

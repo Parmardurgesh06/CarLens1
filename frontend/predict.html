@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CarLens | Predict Car Value</title>
+
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./css/style.css?v=10">
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <img src="./images/carlens-logo.png" alt="CarLens Logo">
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="predict.html">
+                Predict
+            </a>
+
+            <a href="compare.html">
+                Compare
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="index.html#contact">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="nav-buttons">
+
+            <a href="login.html" class="login-btn">
+                Login
+            </a>
+
+            <a href="signup.html" class="signup-btn">
+                Get Started
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         PREDICTION PAGE
+    ====================================================== -->
+
+    <main class="predict-page">
+
+
+        <!-- PAGE HEADER -->
+
+        <div class="predict-header">
+
+            <p class="small-heading">
+                CAR VALUATION
+            </p>
+
+            <h1>
+                Discover Your Car's
+                <span>Estimated Value.</span>
+            </h1>
+
+            <p>
+                Enter your vehicle details below and CarLens
+                will estimate its market value using machine
+                learning.
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PREDICTION AREA
+        ================================================== -->
+
+        <div class="prediction-area">
+
+
+            <!-- =================================================
+                 FORM CARD
+            ================================================== -->
+
+            <div class="prediction-form-card">
+
+                <div class="card-title">
+
+                    <p>
+                        VEHICLE DETAILS
+                    </p>
+
+                    <h2>
+                        Tell us about your car
+                    </h2>
+
+                </div>
+
+
+                <form id="predictionForm">
+
+
+                    <!-- CAR NAME -->
+
+                    <div class="input-group">
+
+                        <label for="carName">
+                            Car Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="carName"
+                            name="name"
+                            placeholder="e.g. Honda City"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- COMPANY -->
+
+                    <div class="input-group">
+
+                        <label for="company">
+                            Company
+                        </label>
+
+                        <input
+                            type="text"
+                            id="company"
+                            name="company"
+                            placeholder="e.g. Honda"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- YEAR -->
+
+                    <div class="input-group">
+
+                        <label for="year">
+                            Manufacturing Year
+                        </label>
+
+                        <input
+                            type="number"
+                            id="year"
+                            name="year"
+                            placeholder="e.g. 2018"
+                            min="1990"
+                            max="2026"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- KILOMETERS -->
+
+                    <div class="input-group">
+
+                        <label for="kmsDriven">
+                            Kilometers Driven
+                        </label>
+
+                        <input
+                            type="number"
+                            id="kmsDriven"
+                            name="kms_driven"
+                            placeholder="e.g. 45000"
+                            min="0"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- FUEL TYPE -->
+
+                    <div class="input-group">
+
+                        <label for="fuelType">
+                            Fuel Type
+                        </label>
+
+                        <select
+                            id="fuelType"
+                            name="fuel_type"
+                            required>
+
+                            <option value="">
+                                Select fuel type
+                            </option>
+
+                            <option value="Petrol">
+                                Petrol
+                            </option>
+
+                            <option value="Diesel">
+                                Diesel
+                            </option>
+
+                            <option value="CNG">
+                                CNG
+                            </option>
+
+                            <option value="LPG">
+                                LPG
+                            </option>
+
+                            <option value="Electric">
+                                Electric
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- PREDICT BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="predict-button">
+
+                        Predict Car Value →
+
+                    </button>
+
+                </form>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RESULT CARD
+            ================================================== -->
+
+            <div class="prediction-result-card">
+
+
+                <!-- RESULT VISUAL -->
+
+                <div class="result-visual">
+
+                    <div class="result-glow"></div>
+
+                    <div
+                        class="result-car"
+                        id="resultCar">
+
+                        🚗
+
+                    </div>
+
+                    <p>
+                        CARLENS VALUATION
+                    </p>
+
+                </div>
+
+
+
+                <!-- RESULT CONTENT -->
+
+                <div class="result-content">
+
+                    <p class="result-label">
+                        ESTIMATED MARKET VALUE
+                    </p>
+
+                    <h2 id="resultPrice">
+                        ₹ 0
+                    </h2>
+
+                    <p
+                        class="prediction-status"
+                        id="predictionStatus">
+
+                        Enter your car details to get
+                        an estimated value.
+
+                    </p>
+
+
+                    <div class="result-line"></div>
+
+
+
+                    <!-- RESULT INFORMATION -->
+
+                    <div class="result-info">
+
+
+                        <div>
+
+                            <span>
+                                CAR
+                            </span>
+
+                            <strong id="resultName">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                YEAR
+                            </span>
+
+                            <strong id="resultYear">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                FUEL
+                            </span>
+
+                            <strong id="resultFuel">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- RESULT BUTTONS -->
+
+                    <div class="result-buttons">
+
+                        <button
+                            type="button"
+                            id="newPredictionBtn">
+
+                            New Prediction
+
+                        </button>
+
+                        <button
+                            type="button"
+                            id="compareBtn">
+
+                            Compare Cars
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             INFORMATION NOTE
+        ================================================== -->
+
+        <div class="prediction-note">
+
+            <div>
+                💡
+            </div>
+
+            <div>
+
+                <h3>
+                    How is the value calculated?
+                </h3>
+
+                <p>
+                    CarLens considers factors such as the car
+                    model, company, manufacturing year,
+                    kilometers driven and fuel type to estimate
+                    the vehicle's market value.
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            CarLens
+        </div>
+
+        <p>
+            Smart Car Valuation using Machine Learning.
+        </p>
+
+        <p class="copyright">
+            © 2026 CarLens. All rights reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+            /* =================================================
+               ELEMENTS
+            ================================================= */
+
+            const predictionForm =
+                document.getElementById("predictionForm");
+
+            const resultPrice =
+                document.getElementById("resultPrice");
+
+            const predictionStatus =
+                document.getElementById("predictionStatus");
+
+            const resultName =
+                document.getElementById("resultName");
+
+            const resultYear =
+                document.getElementById("resultYear");
+
+            const resultFuel =
+                document.getElementById("resultFuel");
+
+            const newPredictionBtn =
+                document.getElementById("newPredictionBtn");
+
+            const compareBtn =
+                document.getElementById("compareBtn");
+
+
+            /* =================================================
+               PREDICTION FORM
+            ================================================= */
+
+            predictionForm.addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+
+                    const carName =
+                        document.getElementById("carName")
+                            .value.trim();
+
+                    const company =
+                        document.getElementById("company")
+                            .value.trim();
+
+                    const year =
+                        document.getElementById("year")
+                            .value;
+
+                    const kmsDriven =
+                        document.getElementById("kmsDriven")
+                            .value;
+
+                    const fuelType =
+                        document.getElementById("fuelType")
+                            .value;
+
+
+                    /* -----------------------------------------
+                       VALIDATION
+                    ----------------------------------------- */
+
+                    if (
+                        carName === "" ||
+                        company === "" ||
+                        year === "" ||
+                        kmsDriven === "" ||
+                        fuelType === ""
+                    ) {
+
+                        alert(
+                            "Please fill in all car details."
+                        );
+
+                        return;
+
+                    }
+
+
+                    /* -----------------------------------------
+                       BASIC YEAR VALIDATION
+                    ----------------------------------------- */
+
+                    if (
+                        Number(year) < 1990 ||
+                        Number(year) > 2026
+                    ) {
+
+                        alert(
+                            "Please enter a valid manufacturing year."
+                        );
+
+                        return;
+
+                    }
+
+
+                    /* -----------------------------------------
+                       UPDATE RESULT CARD
+                    ----------------------------------------- */
+
+                    resultName.textContent =
+                        carName;
+
+                    resultYear.textContent =
+                        year;
+
+                    resultFuel.textContent =
+                        fuelType;
+
+
+                    /* -----------------------------------------
+                       TEMPORARY DEMO VALUE
+
+                       This will be replaced by the actual
+                       linear.pkl prediction when we connect
+                       Flask/Python backend.
+                    ----------------------------------------- */
+
+                    const currentYear = 2026;
+
+                    const age =
+                        currentYear - Number(year);
+
+                    let demoPrice = 700000;
+
+                    demoPrice -= age * 30000;
+
+                    demoPrice -=
+                        Number(kmsDriven) * 2;
+
+                    if (fuelType === "Diesel") {
+                        demoPrice += 50000;
+                    }
+
+                    if (fuelType === "CNG") {
+                        demoPrice += 20000;
+                    }
+
+                    if (fuelType === "Electric") {
+                        demoPrice += 80000;
+                    }
+
+                    if (demoPrice < 50000) {
+                        demoPrice = 50000;
+                    }
+
+
+                    /* -----------------------------------------
+                       FORMAT PRICE
+                    ----------------------------------------- */
+
+                    const formattedPrice =
+                        Math.round(demoPrice)
+                            .toLocaleString("en-IN");
+
+
+                    resultPrice.textContent =
+                        "₹ " + formattedPrice;
+
+
+                    predictionStatus.textContent =
+                        "Estimated value generated successfully.";
+
+
+                    /* -----------------------------------------
+                       SCROLL TO RESULT ON MOBILE
+                    ----------------------------------------- */
+
+                    if (window.innerWidth <= 1000) {
+
+                        document
+                            .querySelector(".prediction-result-card")
+                            .scrollIntoView({
+                                behavior: "smooth",
+                                block: "start"
+                            });
+
+                    }
+
+                }
+            );
+
+
+            /* =================================================
+               NEW PREDICTION
+            ================================================= */
+
+            newPredictionBtn.addEventListener(
+                "click",
+                function () {
+
+                    predictionForm.reset();
+
+                    resultPrice.textContent =
+                        "₹ 0";
+
+                    predictionStatus.textContent =
+                        "Enter your car details to get an estimated value.";
+
+                    resultName.textContent =
+                        "—";
+
+                    resultYear.textContent =
+                        "—";
+
+                    resultFuel.textContent =
+                        "—";
+
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+
+                }
+            );
+
+
+            /* =================================================
+               COMPARE BUTTON
+            ================================================= */
+
+            compareBtn.addEventListener(
+                "click",
+                function () {
+
+                    window.location.href =
+                        "compare.html";
+
+                }
+            );
+
+
+        });
+
+    </script>
+
+</body>
+
+</html>

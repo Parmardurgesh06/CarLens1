@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Compare Cars | CarLens</title>
+
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            <img src="./images/logo.png" alt="CarLens Logo">
+        </a>
+
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="predict.html">Predict</a>
+            <a href="compare.html" class="active">Compare</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+
+        <div class="nav-buttons">
+            <a href="dashboard.html" class="dashboard-link">Dashboard</a>
+            <a href="login.html" class="login-btn">Login</a>
+        </div>
+
+    </nav>
+
+
+    <!-- MAIN SECTION -->
+
+    <main class="compare-page">
+
+
+        <!-- PAGE HEADER -->
+
+        <section class="compare-header">
+
+            <p class="section-tag">
+                ⚡ AI-POWERED COMPARISON
+            </p>
+
+            <h1>
+                Compare <span>Cars.</span>
+            </h1>
+
+            <p class="compare-subtitle">
+                Compare two vehicles side by side and discover which one
+                offers the better value.
+            </p>
+
+        </section>
+
+
+        <!-- CAR INPUT SECTION -->
+
+        <section class="comparison-section">
+
+
+            <!-- CAR A -->
+
+            <div class="compare-car-card">
+
+                <div class="compare-card-title">
+
+                    <span class="car-letter">A</span>
+
+                    <div>
+                        <p>VEHICLE ONE</p>
+                        <h2>First Car</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="compare-form-group">
+
+                    <label>Company</label>
+
+                    <input
+                        type="text"
+                        placeholder="e.g. Hyundai"
+                    >
+
+                </div>
+
+
+                <div class="compare-form-group">
+
+                    <label>Car Model</label>
+
+                    <input
+                        type="text"
+                        placeholder="e.g. Creta"
+                    >
+
+                </div>
+
+
+                <div class="compare-row">
+
+                    <div class="compare-form-group">
+
+                        <label>Year</label>
+
+                        <input
+                            type="number"
+                            placeholder="2022"
+                        >
+
+                    </div>
+
+
+                    <div class="compare-form-group">
+
+                        <label>Kilometers</label>
+
+                        <input
+                            type="number"
+                            placeholder="30000"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="compare-form-group">
+
+                    <label>Fuel Type</label>
+
+                    <select>
+
+                        <option value="">Select Fuel Type</option>
+                        <option>Petrol</option>
+                        <option>Diesel</option>
+                        <option>CNG</option>
+                        <option>LPG</option>
+                        <option>Hybrid</option>
+                        <option>Electric</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- VS -->
+
+            <div class="vs-container">
+
+                <div class="vs-circle">
+                    VS
+                </div>
+
+                <span></span>
+
+            </div>
+
+
+            <!-- CAR B -->
+
+            <div class="compare-car-card">
+
+                <div class="compare-card-title">
+
+                    <span class="car-letter car-b">B</span>
+
+                    <div>
+                        <p>VEHICLE TWO</p>
+                        <h2>Second Car</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="compare-form-group">
+
+                    <label>Company</label>
+
+                    <input
+                        type="text"
+                        placeholder="e.g. Tata"
+                    >
+
+                </div>
+
+
+                <div class="compare-form-group">
+
+                    <label>Car Model</label>
+
+                    <input
+                        type="text"
+                        placeholder="e.g. Nexon"
+                    >
+
+                </div>
+
+
+                <div class="compare-row">
+
+                    <div class="compare-form-group">
+
+                        <label>Year</label>
+
+                        <input
+                            type="number"
+                            placeholder="2023"
+                        >
+
+                    </div>
+
+
+                    <div class="compare-form-group">
+
+                        <label>Kilometers</label>
+
+                        <input
+                            type="number"
+                            placeholder="20000"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="compare-form-group">
+
+                    <label>Fuel Type</label>
+
+                    <select>
+
+                        <option value="">Select Fuel Type</option>
+                        <option>Petrol</option>
+                        <option>Diesel</option>
+                        <option>CNG</option>
+                        <option>LPG</option>
+                        <option>Hybrid</option>
+                        <option>Electric</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- COMPARE BUTTON -->
+
+        <div class="compare-action">
+
+            <button class="compare-now-btn">
+                ⚡ Compare Cars
+            </button>
+
+        </div>
+
+
+        <!-- DUMMY RESULT PREVIEW -->
+
+        <section class="comparison-result">
+
+
+            <div class="result-heading">
+
+                <p>COMPARISON RESULT</p>
+
+                <h2>Which Car Offers Better Value?</h2>
+
+            </div>
+
+
+            <div class="result-table">
+
+
+                <div class="result-row result-header-row">
+
+                    <div>FEATURE</div>
+
+                    <div>HYUNDAI CRETA</div>
+
+                    <div>VS</div>
+
+                    <div>TATA NEXON</div>
+
+                </div>
+
+
+                <div class="result-row">
+
+                    <div class="feature-name">Estimated Value</div>
+
+                    <div class="price-value">₹ 12,50,000</div>
+
+                    <div class="vs-small">VS</div>
+
+                    <div class="price-value">₹ 10,80,000</div>
+
+                </div>
+
+
+                <div class="result-row">
+
+                    <div class="feature-name">Manufacturing Year</div>
+
+                    <div>2022</div>
+
+                    <div class="vs-small">VS</div>
+
+                    <div>2023</div>
+
+                </div>
+
+
+                <div class="result-row">
+
+                    <div class="feature-name">Fuel Type</div>
+
+                    <div>Petrol</div>
+
+                    <div class="vs-small">VS</div>
+
+                    <div>Electric</div>
+
+                </div>
+
+
+                <div class="result-row">
+
+                    <div class="feature-name">Kilometers Driven</div>
+
+                    <div>30,000 km</div>
+
+                    <div class="vs-small">VS</div>
+
+                    <div>20,000 km</div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="winner-card">
+
+                <span>🏆</span>
+
+                <div>
+
+                    <p>CARLENS RECOMMENDATION</p>
+
+                    <h3>Tata Nexon offers better value based on the comparison.</h3>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div>
+
+            <img src="./images/logo.png" alt="CarLens Logo">
+
+            <p>
+                See Value. Drive Smarter.
+            </p>
+
+        </div>
+
+
+        <p>
+            © 2026 CarLens. AI-Powered Car Valuation.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
