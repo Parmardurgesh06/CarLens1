@@ -87,7 +87,7 @@ Model performance depends on the quality of the dataset, feature selection, and 
 
 **Durgesh Parmar**
 
-B.Tech Information and Communication Technology Student
+B.Tech Information and Communication Technology Students
 
 Adani University, Ahmedabad
 
